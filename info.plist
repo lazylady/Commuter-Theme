@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>grq@ynmlynql.fr</string>
+	<key>contactName</key>
+	<string>Ted Broberg</string>
+	<key>description</key>
+	<string>Crafted to be suitable when commuting by train. After years of testing works equally good in dark/light situations (no train travelling needed).</string>
+	<key>name</key>
+	<string>Commuter</string>
+	<key>uuid</key>
+	<string>2B4D4000-E211-4AE6-8990-345049DC9B04</string>
+</dict>
+</plist>
