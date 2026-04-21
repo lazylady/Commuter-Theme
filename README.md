@@ -14,7 +14,7 @@ A color theme crafted for reading code on the train. After years of testing, it 
 | Sublime Text | `Commuter.tmTheme`                                         |
 | Xcode        | `Commuter.xccolortheme`                                    |
 | Zed          | `Commuter.json`                                            |
-| Obsidian     | `Commuter.obsidian.css` + `Commuter.obsidian-manifest.json` |
+| Obsidian     | `Commuter.obsidian.css` + `Commuter.obsidian-manifest.json` + `Commuter.obsidian-README.md` |
 | Ghostty      | `Commuter.ghostty`                                         |
 | Terminal.app | `Commuter.terminal`                                        |
 
@@ -52,7 +52,8 @@ Obsidian expects a folder per theme. In your vault:
 ```
 <Vault>/.obsidian/themes/Commuter/
 ├── manifest.json   ← from Commuter.obsidian-manifest.json
-└── theme.css       ← from Commuter.obsidian.css
+├── theme.css       ← from Commuter.obsidian.css
+└── README.md       ← from Commuter.obsidian-README.md
 ```
 
 Create the folder, copy the two files in (renaming them as shown), then enable **Commuter** under **Settings → Appearance → Themes**. Dark mode only — in light mode Obsidian's defaults apply.
