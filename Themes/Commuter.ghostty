@@ -1,0 +1,38 @@
+# Commuter for Ghostty
+# Author: Ted Broberg
+# Version: 2.0.0
+# Source: Commuter palette, shared with TextMate, Xcode, Zed, and Obsidian.
+#
+# Dark, low-glare terminal theme. Graphite base (#262626) with muted text
+# and a semantic 16-color ANSI palette. Cyan is a navigational accent;
+# warm tones (orange, red, green, rose) are reserved for meaning — warnings,
+# errors, success, strings.
+
+background = #262626
+foreground = #dadada
+
+cursor-color = #dadada
+cursor-text = #262626
+
+selection-background = #335577
+selection-foreground = #dadada
+
+# Normal (0–7)
+palette = 0=#363636
+palette = 1=#ff5252
+palette = 2=#79b24f
+palette = 3=#ff9933
+palette = 4=#99ccff
+palette = 5=#ff0099
+palette = 6=#66cccc
+palette = 7=#dadada
+
+# Bright (8–15)
+palette = 8=#565656
+palette = 9=#ff8686
+palette = 10=#99cc66
+palette = 11=#cccc99
+palette = 12=#3399ff
+palette = 13=#ff3399
+palette = 14=#99dddd
+palette = 15=#eeeeee
