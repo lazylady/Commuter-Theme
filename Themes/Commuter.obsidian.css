@@ -1,0 +1,533 @@
+/*
+Commuter for Obsidian
+
+Author: Ted Broberg
+Version: 2.0.0
+Source: Commuter for Zed, theme schema v0.2.0
+
+"Vaseline for your eyes without the smudge."
+
+A dark, low-glare theme that grew out of years of tuning a personal editor
+palette for train travel — bright windows, dark tunnels, reflections,
+overhead lights, tired eyes, and long stretches of reading or writing.
+
+The theme avoids pure black and sharp white. Its graphite base keeps the UI
+steady in mixed light; muted text preserves contrast without glare. Cyan is
+a navigational accent, not decoration. Warm orange, red, green, and rose
+tones are reserved for meaning — warnings, errors, success, strings, and
+other semantic cues.
+
+Dark mode only. In light mode, Obsidian's defaults apply.
+*/
+
+.theme-dark {
+  color-scheme: dark;
+
+  /* Palette */
+  --commuter-bg: #262626;
+  --commuter-bg-2: #252931;
+  --commuter-bg-3: #1e2228;
+  --commuter-active: #2d323c;
+  --commuter-border: #363636;
+  --commuter-border-strong: #1e2229;
+  --commuter-border-hover: #565656;
+  --commuter-text: #dadada;
+  --commuter-muted: #bababa;
+  --commuter-faint: #888888;
+  --commuter-accent: #109ac4;
+  --commuter-accent-hover: #29a0bb;
+  --commuter-blue: #99ccff;
+  --commuter-cyan: #66cccc;
+  --commuter-green: #99cc66;
+  --commuter-green-muted: #79b24f;
+  --commuter-orange: #ff9933;
+  --commuter-red: #ff5252;
+  --commuter-string: #ff8686;
+  --commuter-magenta: #ff0099;
+  --commuter-comment: #cccc99;
+  --commuter-link: #3399ff;
+  --commuter-link-hover: #66aaff;
+  --commuter-selection: #4d97ff66;
+  --commuter-selection-active: #4d97ff80;
+  --commuter-highlight: #4d97ff33;
+
+  /* Surfaces */
+  --background-primary: var(--commuter-bg);
+  --background-primary-alt: #242424;
+  --background-secondary: var(--commuter-bg-2);
+  --background-secondary-alt: var(--commuter-bg-3);
+  --background-modifier-hover: #ffffff0a;
+  --background-modifier-active-hover: var(--commuter-active);
+  --background-modifier-border: var(--commuter-border);
+  --background-modifier-border-hover: var(--commuter-border-hover);
+  --background-modifier-border-focus: var(--commuter-accent);
+  --background-modifier-form-field: #00000022;
+  --background-modifier-form-field-highlighted: var(--commuter-active);
+  --background-modifier-box-shadow: #00000040;
+  --background-modifier-success: #79b24f1a;
+  --background-modifier-error: #ff52521a;
+  --background-modifier-error-hover: #ff525233;
+  --background-modifier-cover: #00000099;
+
+  /* Text */
+  --text-normal: var(--commuter-text);
+  --text-muted: var(--commuter-muted);
+  --text-faint: var(--commuter-faint);
+  --text-on-accent: #ffffff;
+  --text-on-accent-inverted: var(--commuter-bg-3);
+  --text-accent: var(--commuter-accent);
+  --text-accent-hover: var(--commuter-cyan);
+  --text-selection: var(--commuter-selection);
+  --text-highlight-bg: var(--commuter-highlight);
+  --text-highlight-bg-active: var(--commuter-selection-active);
+  --text-error: var(--commuter-red);
+  --text-warning: var(--commuter-orange);
+  --text-success: var(--commuter-green-muted);
+
+  /* Interactive */
+  --interactive-normal: #00000022;
+  --interactive-hover: var(--commuter-active);
+  --interactive-accent: var(--commuter-accent);
+  --interactive-accent-hover: var(--commuter-accent-hover);
+  --interactive-accent-hsl: 193, 85%, 42%;
+  --interactive-success: var(--commuter-green-muted);
+
+  /* Chrome */
+  --titlebar-background: var(--commuter-bg-3);
+  --titlebar-background-focused: var(--commuter-bg-3);
+  --titlebar-text-color: var(--commuter-muted);
+  --titlebar-text-color-focused: var(--commuter-text);
+  --ribbon-background: var(--commuter-bg-2);
+  --ribbon-background-collapsed: var(--commuter-bg-2);
+  --tab-container-background: var(--commuter-bg-2);
+  --tab-text-color: var(--commuter-muted);
+  --tab-text-color-focused: var(--commuter-muted);
+  --tab-text-color-focused-active: var(--commuter-text);
+  --tab-text-color-focused-highlighted: var(--commuter-accent);
+  --tab-outline-color: var(--commuter-border-strong);
+  --tab-background-active: var(--commuter-active);
+  --divider-color: var(--commuter-border);
+  --divider-color-hover: var(--commuter-border-hover);
+  --status-bar-background: var(--commuter-bg-3);
+  --status-bar-text-color: var(--commuter-muted);
+  --status-bar-border-color: var(--commuter-border-strong);
+
+  /* Navigation */
+  --nav-item-color: var(--commuter-muted);
+  --nav-item-color-hover: var(--commuter-text);
+  --nav-item-color-active: var(--commuter-text);
+  --nav-item-background-hover: #ffffff0a;
+  --nav-item-background-active: var(--commuter-active);
+  --nav-collapse-icon-color: var(--commuter-faint);
+  --nav-collapse-icon-color-collapsed: var(--commuter-muted);
+
+  /* Links */
+  --link-color: var(--commuter-link);
+  --link-color-hover: var(--commuter-link-hover);
+  --link-external-color: var(--commuter-link);
+  --link-external-color-hover: var(--commuter-link-hover);
+  --link-unresolved-color: var(--commuter-string);
+  --link-unresolved-opacity: 0.85;
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  /* Headings — single hue family, weight carries the hierarchy */
+  --h1-color: var(--commuter-accent);
+  --h2-color: var(--commuter-text);
+  --h3-color: var(--commuter-text);
+  --h4-color: var(--commuter-text);
+  --h5-color: var(--commuter-muted);
+  --h6-color: var(--commuter-muted);
+  --h1-weight: 700;
+  --h2-weight: 650;
+  --h3-weight: 600;
+  --h4-weight: 550;
+  --h5-weight: 600;
+  --h6-weight: 500;
+  --h5-variant: small-caps;
+  --h6-variant: small-caps;
+  --heading-spacing: 1.25em;
+
+  /* Inline emphasis */
+  --bold-color: var(--commuter-text);
+  --bold-weight: 700;
+  --italic-color: var(--commuter-text);
+  --blockquote-color: var(--commuter-muted);
+  --blockquote-border-color: var(--commuter-accent);
+  --blockquote-background-color: #00000022;
+  --hr-color: var(--commuter-border);
+  --hr-thickness: 1px;
+
+  /* Code — inline neutral, fenced blocks carry syntax color */
+  --code-normal: var(--commuter-text);
+  --code-background: #00000026;
+  --code-comment: var(--commuter-comment);
+  --code-function: var(--commuter-text);
+  --code-important: var(--commuter-magenta);
+  --code-keyword: var(--commuter-blue);
+  --code-operator: var(--commuter-text);
+  --code-property: var(--commuter-blue);
+  --code-punctuation: var(--commuter-muted);
+  --code-string: var(--commuter-string);
+  --code-tag: var(--commuter-blue);
+  --code-value: var(--commuter-orange);
+
+  /* Tags */
+  --tag-color: var(--commuter-blue);
+  --tag-color-hover: var(--commuter-text);
+  --tag-background: #99ccff1a;
+  --tag-background-hover: #99ccff2e;
+  --tag-border-color: #99ccff33;
+  --tag-border-color-hover: var(--commuter-blue);
+  --tag-border-width: 1px;
+  --tag-radius: 999px;
+  --tag-padding-x: 0.55em;
+  --tag-padding-y: 0.1em;
+  --tag-weight: 500;
+
+  /* Editor */
+  --indentation-guide-color: var(--commuter-border);
+  --indentation-guide-color-active: var(--commuter-border-hover);
+  --caret-color: var(--commuter-text);
+
+  /* Checkboxes */
+  --checkbox-color: var(--commuter-border);
+  --checkbox-color-hover: var(--commuter-accent);
+  --checkbox-border-color: var(--commuter-border);
+  --checkbox-border-color-hover: var(--commuter-accent);
+  --checkbox-marker-color: #ffffff;
+  --checkbox-color-checked: var(--commuter-green-muted);
+  --checklist-done-color: var(--commuter-faint);
+
+  /* Tables */
+  --table-header-background: var(--commuter-bg-2);
+  --table-header-background-hover: var(--commuter-active);
+  --table-row-background-hover: #ffffff0a;
+  --table-border-color: var(--commuter-border);
+  --table-selection: #4d97ff1a;
+  --table-selection-blend-mode: normal;
+
+  /* Callouts */
+  --callout-title-color: var(--commuter-text);
+  --callout-content-background: transparent;
+  --callout-border-width: 1px;
+  --callout-radius: 6px;
+  --callout-padding: 1em;
+
+  /* Icons */
+  --icon-color: var(--commuter-muted);
+  --icon-color-hover: var(--commuter-text);
+  --icon-color-active: var(--commuter-accent);
+  --icon-color-focused: var(--commuter-accent);
+  --icon-color-muted: var(--commuter-muted);
+
+  /* Scrollbars & modals */
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #565656;
+  --scrollbar-active-thumb-bg: #666666;
+  --modal-background: var(--commuter-bg-2);
+  --modal-border-color: var(--commuter-border);
+  --prompt-border-color: var(--commuter-accent);
+  --prompt-input-background: var(--commuter-bg);
+  --background-modifier-message: var(--commuter-bg-2);
+
+  /* Canvas */
+  --canvas-color-1: var(--commuter-accent);
+  --canvas-color-2: var(--commuter-green-muted);
+  --canvas-color-3: var(--commuter-orange);
+  --canvas-color-4: var(--commuter-red);
+  --canvas-color-5: var(--commuter-cyan);
+  --canvas-color-6: var(--commuter-magenta);
+
+  /* Graph */
+  --graph-line: var(--commuter-border);
+  --graph-node: var(--commuter-text);
+  --graph-node-unresolved: var(--commuter-faint);
+  --graph-node-focused: var(--commuter-accent);
+  --graph-node-tag: var(--commuter-blue);
+  --graph-node-attachment: var(--commuter-green-muted);
+}
+
+/* Tab seam and active tab underline */
+.theme-dark .workspace-tab-header.is-active {
+  background-color: var(--commuter-active);
+}
+.theme-dark .workspace-leaf.mod-active .view-header,
+.theme-dark .workspace-tab-header.is-active::after {
+  box-shadow: inset 0 -1px 0 var(--commuter-accent);
+}
+
+/* Active file in explorer */
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active,
+.theme-dark .tree-item-self.is-active {
+  background-color: var(--commuter-active);
+  color: var(--commuter-text);
+}
+
+/* Reading and editing baseline */
+.theme-dark .markdown-source-view.mod-cm6 .cm-scroller,
+.theme-dark .markdown-preview-view {
+  line-height: 1.62;
+}
+
+/* Active line, gutter, selection, cursor */
+.theme-dark .markdown-source-view.mod-cm6 .cm-active.cm-line,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.cm-active {
+  background-color: #ffffff06;
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line ::selection,
+.theme-dark .markdown-preview-view ::selection {
+  background-color: var(--commuter-selection);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-cursor {
+  border-left-color: var(--commuter-text);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-gutters {
+  background-color: var(--commuter-bg);
+  color: var(--commuter-muted);
+  border-right-color: var(--commuter-border);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-active .cm-gutterElement {
+  color: var(--commuter-text);
+}
+
+/* Syntax highlighting (CodeMirror + Prism) */
+.theme-dark .markdown-source-view.mod-cm6 .cm-comment,
+.theme-dark .token.comment,
+.theme-dark .token.prolog,
+.theme-dark .token.doctype,
+.theme-dark .token.cdata {
+  color: var(--commuter-comment);
+  font-style: italic;
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-keyword,
+.theme-dark .markdown-source-view.mod-cm6 .cm-builtin,
+.theme-dark .token.keyword,
+.theme-dark .token.selector,
+.theme-dark .token.atrule {
+  color: var(--commuter-blue);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-string,
+.theme-dark .token.string,
+.theme-dark .token.char {
+  color: var(--commuter-string);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-number,
+.theme-dark .markdown-source-view.mod-cm6 .cm-bool,
+.theme-dark .token.number,
+.theme-dark .token.boolean {
+  color: var(--commuter-orange);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-def,
+.theme-dark .markdown-source-view.mod-cm6 .cm-variable-2,
+.theme-dark .token.function {
+  color: var(--commuter-text);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-variable,
+.theme-dark .markdown-source-view.mod-cm6 .cm-variable-3,
+.theme-dark .token.variable,
+.theme-dark .markdown-source-view.mod-cm6 .cm-property,
+.theme-dark .markdown-source-view.mod-cm6 .cm-attribute,
+.theme-dark .token.property,
+.theme-dark .token.attr-name,
+.theme-dark .markdown-source-view.mod-cm6 .cm-tag,
+.theme-dark .token.tag {
+  color: var(--commuter-blue);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-operator,
+.theme-dark .markdown-source-view.mod-cm6 .cm-punctuation,
+.theme-dark .token.operator,
+.theme-dark .token.punctuation {
+  color: var(--commuter-text);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-link,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url {
+  color: var(--commuter-accent);
+  font-style: italic;
+}
+
+/* Highlights */
+.theme-dark .markdown-rendered mark,
+.theme-dark .markdown-source-view.mod-cm6 .cm-highlight {
+  background-color: var(--commuter-highlight);
+  color: var(--commuter-text);
+}
+
+/* Blockquotes */
+.theme-dark .markdown-rendered blockquote,
+.theme-dark .HyperMD-quote {
+  background-color: var(--blockquote-background-color);
+  border-left: 3px solid var(--commuter-accent);
+  color: var(--commuter-muted);
+}
+
+/* Inline code — neutral text, tinted background, hair border */
+.theme-dark .markdown-rendered code:not(pre > code),
+.theme-dark .cm-inline-code {
+  color: var(--commuter-text);
+  background-color: var(--code-background);
+  border: 1px solid var(--commuter-border);
+  border-radius: 4px;
+  padding: 0.05em 0.35em;
+}
+
+/* Fenced code blocks */
+.theme-dark .markdown-rendered pre,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+.theme-dark .markdown-source-view.mod-cm6 .cm-codeblock,
+.theme-dark .markdown-source-view.mod-cm6 .cm-codeblock-bg {
+  background-color: #00000022;
+}
+.theme-dark .markdown-rendered pre {
+  border: 1px solid var(--commuter-border);
+  border-radius: 6px;
+}
+
+/* Tables */
+.theme-dark .markdown-rendered table {
+  border-color: var(--commuter-border);
+}
+.theme-dark .markdown-rendered th {
+  color: var(--commuter-text);
+  font-weight: 600;
+}
+
+/* Properties panel (frontmatter) */
+.theme-dark .metadata-container {
+  background-color: transparent;
+  border-top: 1px solid var(--commuter-border);
+  border-bottom: 1px solid var(--commuter-border);
+  padding: 0.5em 0;
+}
+.theme-dark .metadata-property-key {
+  color: var(--commuter-muted);
+}
+.theme-dark .metadata-property-key-input {
+  color: var(--commuter-muted);
+  background: transparent;
+}
+.theme-dark .metadata-property-value {
+  color: var(--commuter-text);
+}
+.theme-dark .metadata-property:hover {
+  background-color: #ffffff06;
+}
+
+/* Callouts — palette-accurate tint */
+.theme-dark .callout {
+  background-color: rgba(var(--callout-color), 0.08);
+  border: 1px solid rgba(var(--callout-color), 0.35);
+}
+.theme-dark .callout-title {
+  color: rgb(var(--callout-color));
+}
+.theme-dark .callout[data-callout="note"],
+.theme-dark .callout[data-callout="info"],
+.theme-dark .callout[data-callout="todo"] {
+  --callout-color: 16, 154, 196;
+}
+.theme-dark .callout[data-callout="abstract"],
+.theme-dark .callout[data-callout="summary"],
+.theme-dark .callout[data-callout="tldr"] {
+  --callout-color: 102, 204, 204;
+}
+.theme-dark .callout[data-callout="tip"],
+.theme-dark .callout[data-callout="hint"],
+.theme-dark .callout[data-callout="important"] {
+  --callout-color: 153, 204, 255;
+}
+.theme-dark .callout[data-callout="success"],
+.theme-dark .callout[data-callout="done"],
+.theme-dark .callout[data-callout="check"] {
+  --callout-color: 121, 178, 79;
+}
+.theme-dark .callout[data-callout="question"],
+.theme-dark .callout[data-callout="help"],
+.theme-dark .callout[data-callout="faq"] {
+  --callout-color: 153, 204, 102;
+}
+.theme-dark .callout[data-callout="warning"],
+.theme-dark .callout[data-callout="caution"],
+.theme-dark .callout[data-callout="attention"] {
+  --callout-color: 255, 153, 51;
+}
+.theme-dark .callout[data-callout="error"],
+.theme-dark .callout[data-callout="danger"],
+.theme-dark .callout[data-callout="fail"],
+.theme-dark .callout[data-callout="failure"],
+.theme-dark .callout[data-callout="missing"] {
+  --callout-color: 255, 82, 82;
+}
+.theme-dark .callout[data-callout="bug"] {
+  --callout-color: 255, 0, 153;
+}
+.theme-dark .callout[data-callout="example"],
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="cite"] {
+  --callout-color: 204, 204, 153;
+}
+
+/* Suggestion menus */
+.theme-dark .suggestion-item.is-selected,
+.theme-dark .menu-item:hover,
+.theme-dark .vertical-tab-nav-item.is-active,
+.theme-dark .vertical-tab-nav-item:hover {
+  background-color: var(--commuter-active);
+}
+
+/* Modals & popovers */
+.theme-dark .modal,
+.theme-dark .prompt,
+.theme-dark .popover,
+.theme-dark .menu {
+  background-color: var(--commuter-bg-2);
+  border: 1px solid var(--commuter-border);
+}
+
+/* Buttons */
+.theme-dark button,
+.theme-dark .clickable-icon,
+.theme-dark .dropdown,
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+  border-radius: 6px;
+}
+.theme-dark button.mod-cta,
+.theme-dark .mod-cta {
+  background-color: var(--commuter-accent);
+  color: #ffffff;
+}
+.theme-dark button.mod-cta:hover,
+.theme-dark .mod-cta:hover {
+  background-color: var(--commuter-accent-hover);
+}
+.theme-dark button.mod-warning {
+  background-color: var(--commuter-orange);
+  color: var(--commuter-bg-3);
+}
+
+/* Status bar seam */
+.theme-dark .status-bar {
+  background-color: var(--commuter-bg-3);
+  color: var(--commuter-muted);
+  border-top-color: var(--commuter-border-strong);
+}
+
+/* Scrollbars */
+.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+}
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-active-thumb-bg);
+}
+
+/* Canvas background mirrors the editor */
+.theme-dark .canvas-wrapper,
+.theme-dark .canvas-background {
+  background-color: var(--background-primary);
+}
