@@ -1,0 +1,22 @@
+{
+	"name": "commuter",
+	"displayName": "Commuter",
+	"description": "Vaseline for your eyes — without the smudge. Crafted to be suitable when commuting by train. After years of testing works equally good in dark/light situations (no train travelling needed).",
+	"author": "Ted Broberg",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Commuter",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Commuter-color-theme.json"
+			}
+		]
+	}
+}
