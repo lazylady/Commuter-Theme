@@ -12,7 +12,7 @@ A color theme crafted for reading code on the train. After years of testing, it 
 | ------------ | ---------------------------------------------------------- |
 | TextMate     | `Commuter.tmTheme`                                         |
 | Sublime Text | `Commuter.tmTheme`                                         |
-| Xcode        | `Commuter.dvtcolortheme`                                   |
+| Xcode        | `Commuter.xccolortheme`                                    |
 | Zed          | `Commuter.json`                                            |
 | Obsidian     | `Commuter.obsidian.css` + `Commuter.obsidian-manifest.json` |
 | Ghostty      | `Commuter.ghostty`                                         |
@@ -29,13 +29,13 @@ Double-click `Themes/Commuter.tmTheme` to install.
 Copy `Themes/Commuter.tmTheme` into your `Packages/User/` directory, then select it from **Preferences → Color Scheme**.
 
 ### Xcode
-Copy `Themes/Commuter.dvtcolortheme` into:
+Copy `Themes/Commuter.xccolortheme` into:
 
 ```
 ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 ```
 
-Restart Xcode and pick **Commuter** under **Preferences → Themes**.
+Restart Xcode and pick **Commuter** under **Settings → Themes**.
 
 ### Zed
 Copy `Themes/Commuter.json` into:
