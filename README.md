@@ -13,6 +13,7 @@ A color theme crafted for reading code on the train. After years of testing, it 
 | Zed          | `Commuter.json`                                            |
 | VS Code      | `Commuter.vscode.json` + `Commuter.vscode-package.json` + `Commuter.vscode-README.md` |
 | Obsidian     | `Commuter.obsidian.css` + `Commuter.obsidian-manifest.json` + `Commuter.obsidian-README.md` |
+| Alfred       | `Commuter.alfredappearance`                                |
 | Xcode        | `Commuter.xccolortheme`                                    |
 | Ghostty      | `Commuter.ghostty`                                         |
 | Terminal.app | `Commuter.terminal`                                        |
@@ -55,6 +56,9 @@ Obsidian expects a folder per theme. In your vault:
 ```
 
 Create the folder, copy the two files in (renaming them as shown), then enable **Commuter** under **Settings → Appearance → Themes**. Dark mode only — in light mode Obsidian's defaults apply.
+
+### Alfred
+Double-click `Themes/Commuter.alfredappearance` to import into Alfred, then pick **Commuter** under **Alfred Preferences → Appearance**. Typography is Avenir Next — adjust inside Alfred if you prefer a different face.
 
 ### Xcode
 Copy `Themes/Commuter.xccolortheme` into:
