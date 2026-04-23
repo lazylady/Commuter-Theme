@@ -206,7 +206,7 @@ Editor / workbench concepts that every port should cover when the target format 
 ## Conventions
 
 - **Hex uppercase**, with 8-digit alpha where needed (`#4D97FF66`). Ghostty is the one exception — lowercase there, to match Ghostty's stock themes.
-- **No font-family or size decisions** in the theme. A color theme sets colors; leave the user's font alone. (The Xcode theme names font families because Xcode's format requires it — keep those defaults.)
+- **No font-family or size decisions** in the theme. A color theme sets colors; leave the user's font alone. (The Xcode and Alfred themes name font families because their formats require it — keep those defaults.)
 - **Palette drift is a bug.** See the "off-palette one-offs" note above before adding a new hex value anywhere.
 
 ## Adding a new port
