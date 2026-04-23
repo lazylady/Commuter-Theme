@@ -6,9 +6,9 @@ A color theme crafted for reading code on the train. After years of testing, it 
 
 ---
 
-## Supported Editors
+## Supported Apps
 
-| Editor       | Theme File                                                 |
+| App          | Theme File                                                 |
 | ------------ | ---------------------------------------------------------- |
 | Zed          | `Commuter.json`                                            |
 | VS Code      | `Commuter.vscode.json` + `Commuter.vscode-package.json` + `Commuter.vscode-README.md` |
